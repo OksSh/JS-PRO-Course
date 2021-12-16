@@ -169,6 +169,21 @@ function getListUserAge(array) {
 }
 console.log(getListUserAge(users));
 
+// 2-ое решение
+
+function getListUserAge2(array) {
+  let youngArray = [];
+  let oldArray = array.reduce((prev, value) => {
+    if (value.age <= 18) {
+      youngArray.push(value);
+    } else prev.push(value);
+    return prev;
+  }, []);
+  return [youngArray, oldArray];
+}
+
+console.log(getListUserAge2(users));
+
 //№8 Необходимо создать массив из 15 элементов. В массиве обязательно должны быть одинаковые значения. Напишите код, который уберет эти дубликаты из созданного массива.
 
 let array10 = [5, 5, 8, 6, 8, 6, 9, 10, 1, 1, 7, 7, 7, 0, 3, 4, 6];
@@ -197,15 +212,10 @@ function getIndexArray(array, element) {
     }
   }
   if (arrayIndex.length > 0) {
-    console.log(
-      `Элемент '${element}' в массиве есть, его индекс: ${arrayIndex.join(
-        ','
-      )}.`
-    );
-  } else console.log(`Элемента '${element}' нет в массиве.`);
+    console.log(arrayIndex);
+  } else console.log(-1);
 }
-
-getIndexArray(array12, 1);
+getIndexArray(array12, 10);
 
 //№11 Написать функцию search, которая принимает первым аргументом массив имен:[ ‘Ivan’, ‘Petr’, ‘Sidor’, ...]и любую произвольную строку. Функция должна отфильтровать массив в зависимости от строки (в независимости от регистра). Например: search([‘Ivan’, ‘Petr’, ‘Sidor’], 'si') -> ['Sidor']; search([‘Ivan’, ‘Petr’, ‘Sidor’], 'i') -> [‘Ivan’,'Sidor']; search([‘Ivan’, ‘Petr’, ‘Sidor’, 'Petric'], 'eTr') -> [‘Petr’,'Petric']; search([‘Ivan’, ‘Petr’, ‘Sidor’, 'Petric'], 'eTrooo') -> []
 
@@ -222,6 +232,21 @@ function getFilterArray(array, item) {
 }
 
 console.log(getFilterArray(array13, 'et'));
+
+//2/////////////////////////////////////////////////////////
+const searchArr = ['Ivan', 'Petr', 'Sidor'];
+
+function search(arr, searchText) {
+  let resultArr = arr.reduce((prev, item) => {
+    if (item.toLowerCase().includes(searchText.toLowerCase())) {
+      return prev.concat(item);
+    }
+    return prev;
+  }, []);
+  return resultArr;
+}
+
+console.log(search(searchArr, 'I'));
 
 //№12 Написать функцию сравнения двух массивов, которая возвращает true или false в зависимости от того, одинаковые у них элементы или нет. Пример: checkIsEqaul([1,2,3], [1,2,3]) -> true; checkIsEqaul([1,2,3], [1,2,3,4]) -> false; checkIsEqaul([1,2,3], [1,'2',3]) -> false
 
