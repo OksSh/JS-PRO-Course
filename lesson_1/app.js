@@ -2,14 +2,14 @@
 
 //1 Написать функцию, которая принимает любое количество чисел(не массив)и возвращает их сумму.
 
-function getSum(...arguments){
-  let sum=0;
-  for(let arg of arguments){
-    sum+=arg;
-  }
-  return sum;
-}
-console.log(getSum(1,2,3));
+// function getSum(...arguments){
+//   let sum=0;
+//   for(let arg of arguments){
+//     sum+=arg;
+//   }
+//   return sum;
+// }
+// console.log(getSum(1,2,3));
 
 //2 Написать функцию, которая принимает первым аргументом массив,а вторым любое значение, функция должна вернуть индекс если такое значение есть в массиве и -1 если его нет.(indexOf, findIndex не использовать)
 
@@ -183,6 +183,22 @@ function getListUserAge2(array) {
 }
 
 console.log(getListUserAge2(users));
+
+//3-е
+function getListUserAge3(array) {
+  let results = array.reduce(
+    (prev, item) => {
+      if (item.age >= 18) {
+        prev.oldArray.push(item);
+      } else prev.youngArray.push(item);
+      return prev;
+    },
+    { oldArray: [], youngArray: [] }
+  );
+  return results;
+}
+
+console.log(getListUserAge3(users));
 
 //№8 Необходимо создать массив из 15 элементов. В массиве обязательно должны быть одинаковые значения. Напишите код, который уберет эти дубликаты из созданного массива.
 
