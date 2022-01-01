@@ -1,8 +1,8 @@
 //1 Сделайте промис, внутри которого будет setTimeout в 3 секунды, после которой промис должен зарезолвится (то есть выполнится успешно).
 
-let donePromise = new Promise((resolve, reject) => {
-  setTimeout(resolve('Success!'), 3000);
-});
+let donePromise = new Promise((resolve) =>
+  setTimeout(resolve('Success!'), 3000)
+);
 
 console.log(donePromise);
 
