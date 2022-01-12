@@ -8,9 +8,9 @@ console.log(donePromise);
 
 //2 Сделайте промис, внутри которого будет setTimeout в 3 секунды, после которой промис должен зареджектится (то есть выполнится с ошибкой).\
 
-let errorPromise = new Promise((resolve, reject) => {
-  setTimeout(() => reject(new Error('Error!')), 3000);
-});
+let errorPromise = new Promise((reject) =>
+  setTimeout(() => reject(new Error('Error!')), 3000)
+);
 
 console.log(errorPromise);
 
