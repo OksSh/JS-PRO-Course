@@ -1,0 +1,34 @@
+#first {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid grey;
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.listNone {
+  list-style-type: none;
+}
+
+.imageHover:hover {
+  cursor: pointer;
+}
+
+.imageScale {
+  width: 600px;
+  height: 600px;
+}
+
+.getPhotos {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
