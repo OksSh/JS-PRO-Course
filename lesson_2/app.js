@@ -1,7 +1,7 @@
 //1 Сделайте промис, внутри которого будет setTimeout в 3 секунды, после которой промис должен зарезолвится (то есть выполнится успешно).
 
 let donePromise = new Promise((resolve) =>
-  setTimeout(resolve('Success!'), 3000)
+  setTimeout(() => resolve('Success!'), 3000)
 );
 
 console.log(donePromise);
@@ -130,9 +130,9 @@ function getTodoList(array) {
   for (let item of array) {
     const input = document.createElement('input');
     const userCase = document.createElement('li');
-    input.type = 'checkbox';
     userCase.innerHTML = item.title;
-    userCase.append(input);
+    input.type = 'checkbox';
+    userCase.prepend(input);
     todoList.append(userCase);
     div.append(todoList);
   }
@@ -209,7 +209,7 @@ function getAlbums(array) {
     const li = document.createElement('li');
     a.innerText = element.title;
     a.href = '';
-    li.id = element.id;
+    a.id = element.id;
     li.append(a);
     ul.append(li);
   });
@@ -218,9 +218,8 @@ function getAlbums(array) {
 
   ul.addEventListener('click', (event) => {
     event.preventDefault();
-    if ((event.target.tagName = 'li')) {
-      // let idAlbum = event.target.id;
-      let idAlbum = 1;
+    if ((event.target.tagName = 'a')) {
+      let idAlbum = event.target.id;
       console.log(idAlbum);
       getDataPhotos(urlPhotos, idAlbum);
     }
