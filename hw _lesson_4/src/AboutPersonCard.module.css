@@ -1,0 +1,44 @@
+.card1 {
+  display: flex;
+  box-shadow: 0px 0px 10px 9px rgba(34, 60, 80, 0.2);
+  background-color: white;
+  width: 700px;
+}
+
+.card1__block1 {
+  border: 1px solid rgb(253, 222, 222);
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.card1__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card1__text__name {
+  font-size: 20px;
+  color: orange;
+}
+
+.card1__text__profession {
+  color: black;
+  font-size: 16px;
+}
+
+.card1__block2 {
+  border: 1px solid rgb(253, 222, 222);
+}
+
+.card1__text__description {
+  color: black;
+  margin: 20px;
+}
+
+.card1__icon {
+  width: 30px;
+  height: 30px;
+  margin: 0px 10px 20px 0px;
+}
