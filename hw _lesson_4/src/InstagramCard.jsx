@@ -1,8 +1,8 @@
-import styles from './Card2.module.css';
+import styles from './InstagramCard.module.css';
 import { Component } from 'react';
 import logo from '../img/logo.jpg';
 
-export class Card2 extends Component {
+export class InstagramCard extends Component {
   render() {
     return (
       <div className={styles.card2}>

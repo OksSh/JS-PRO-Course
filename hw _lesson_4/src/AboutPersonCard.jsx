@@ -1,10 +1,10 @@
-import styles from './Card1.module.css';
+import styles from './AboutPersonCard.module.css';
 import logo from '../img/logo.jpg';
 import hangouts from '../img/Hangouts.png';
 import linked from '../img/Linked.png';
 import twitter from '../img/Twitter.png';
 
-export function GetCard1() {
+export function AboutPersonCard() {
   return (
     <div className={styles.card1}>
       <div className={styles.card1__block1}>
