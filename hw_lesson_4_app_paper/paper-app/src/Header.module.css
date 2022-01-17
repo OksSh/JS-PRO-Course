@@ -1,0 +1,51 @@
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.header {
+  font-family: Roboto;
+  padding: 18px 9px;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #5c5c5c;
+  margin: 10px 0px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader__link {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #5c5c5c;
+  margin-left: 22px;
+}
+
+.sectionHeader__link:hover {
+  color: orange;
+}
+
+.sectionHeader__button {
+  margin-left: 22px;
+  height: 39px;
+  background: #161616;
+  border-radius: 100px;
+  color: #ffffff;
+  padding: 0px 25px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.sectionHeader__button:hover {
+  background: orange;
+}
