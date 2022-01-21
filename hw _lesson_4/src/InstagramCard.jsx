@@ -4,6 +4,7 @@ import logo from '../img/logo.jpg';
 
 export class InstagramCard extends Component {
   render() {
+    const { name } = this.props;
     return (
       <div className={styles.card2}>
         <div className={styles.card2__person}>
