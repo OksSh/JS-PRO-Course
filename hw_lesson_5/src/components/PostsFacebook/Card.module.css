@@ -1,0 +1,60 @@
+* {
+  color: black;
+}
+
+p {
+  margin: 0px;
+}
+
+.card {
+  border: 1px solid rgba(175, 166, 166, 0.281);
+  display: flex;
+  width: 700px;
+  padding: 20px;
+}
+
+.card__image img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.card__informationBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.card__name {
+  display: flex;
+}
+
+.card__name p {
+  margin-right: 20px;
+  color: rgb(129, 125, 125);
+}
+
+.card__name span {
+  color: blue;
+  font-weight: bold;
+}
+
+.card__postDescription {
+  display: flex;
+}
+
+.card__href {
+  display: flex;
+}
+
+.card__href a {
+  margin-right: 20px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card__href p {
+  color: rgb(129, 125, 125);
+}

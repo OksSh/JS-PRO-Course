@@ -1,0 +1,29 @@
+.counterWrapper {
+  display: flex;
+}
+
+.buttonIncrement {
+  background-color: rgb(23, 197, 52);
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.buttonDecrement {
+  background-color: goldenrod;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.buttonReset {
+  background-color: brown;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.counterWrapper p {
+  margin: 0 10px;
+  color: black;
+}

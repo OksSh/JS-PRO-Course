@@ -9,7 +9,12 @@ function App() {
       <header className='App-header'>
         <div className='cards'>
           <div className='aboutPersonCard'>
-            <AboutPersonCard />
+            <AboutPersonCard
+              name='Harry'
+              job='Web Developer'
+              description='Skills: Theme, pligin and website development'
+              image='logo.jpg'
+            />
           </div>
           <div className='instagramCard'>
             <InstagramCard />
